@@ -1,0 +1,27 @@
+<div>
+    <label for="name">Escriba su nombre</label>
+    <input type="text" [(ngModel)]="imc.name">
+</div>
+
+<div>
+    <label for="masculino">Masculino:</label>
+    <input type="radio" id="masculino" name="sexo" value="hombre" [(ngModel)]="imc.gender">
+    <label for="femenino">Femenino:</label>
+    <input type="radio" id="femenino" name="sexo" value="mujer" [(ngModel)]="imc.gender">
+</div>
+
+<div>
+    <label>Introduzca su peso:</label>
+    <p>{{imc.weight}} Kg</p>
+    <button type="button" (click)="decreaseWeight()">-</button>
+    <button type="button" (click)="increaseWeight()">+</button>
+</div>
+
+<div>
+    <label>Introduzca su altura:</label>
+    <p>{{imc.height}} cm</p>
+    <button type="button" (click)="decreaseHeight()">-</button>
+    <button type="button" (click)="increaseHeight()">+</button>
+</div>
+
+<button type="button" (click)="sendMsg()">Enviar</button>
